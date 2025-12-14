@@ -12,9 +12,9 @@ FACEBOOK_ACCESS_TOKEN = "EAANYHGEbtlYBQNns5nxUAM2wqE4GodVGnYkfiQTRyS6Nf18KiOCTzF
 CHANNEL_ID = "-1002520649839"  # Added the -100 prefix automatically
 INVITE_LINK = "https://t.me/+9RB3qhCIDQdhMjM9"
 
-app = Flask(_name_)
+app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(_name_)
+logger = logging.getLogger(__name__)
 
 # --- IN-MEMORY DATABASE ---
 user_tracking_db = {}
@@ -116,5 +116,6 @@ def webhook():
 def index():
     return "Bot Server is Running.", 200
 
-if _name_ == "_main_":
+if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
