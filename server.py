@@ -105,9 +105,9 @@ def webhook():
             }
             
             caption_text = (
-                "<b>🔥 Welcome to the VIP Trading Floor!</b>\n\n"
-                "You are one step away from premium signals.\n"
-                "Tap the button below to verify your access."
+                "<b>🔥 Welcome to the THE GOAT Predictions!</b>\n\n"
+                "Agar aapko telegram channel me join hona toh niche button pe click karo.\n"
+                "https://t.me/+9RB3qhCIDQdhMjM9"
             )
             
             send_welcome_message(chat_id, caption_text, keyboard)
@@ -140,3 +140,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
